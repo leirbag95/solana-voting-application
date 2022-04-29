@@ -1,19 +1,47 @@
 {
   "name": "dapp",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 5050"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "pinia": "^2.0.13",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.14"
+    "lottie-vuejs": "^0.4.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1",
+    "vuetify": "^2.6.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "vite": "^2.9.5",
-    "vue-cli-plugin-vuetify": "~2.4.8"
-  }
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

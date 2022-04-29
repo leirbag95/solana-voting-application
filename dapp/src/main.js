@@ -1,12 +1,15 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import vuetify from './plugins/vuetify'
+import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue";
 
-const app = createApp(App)
+Vue.use(LottieAnimation); 
 
-app.use(createPinia())
-app.use(router)
+Vue.config.productionTip = false
 
-app.mount('#app')
+new Vue({
+  router,
+  vuetify,
+  render: function (h) { return h(App) }
+}).$mount('#app')

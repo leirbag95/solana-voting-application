@@ -1,9 +1,25 @@
-<script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <v-container>
+    <v-card>
+    
+    </v-card>
+  </v-container>
 </template>
+
+<script>
+
+
+
+  export default {
+    // eslint-disable-next-line
+    name: 'Home',
+    components: {
+       
+    },
+    data() {
+      return {
+       
+      };
+    },
+  }
+</script>
