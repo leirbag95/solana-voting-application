@@ -1,5 +1,6 @@
 import * as anchor from "@project-serum/anchor";
-import { AnchorError, Program } from "@project-serum/anchor";
+import { AnchorError, LangErrorCode, Program } from "@project-serum/anchor";
+import { expect } from "chai";
 import { Voting } from "../target/types/voting";
 
 
@@ -16,6 +17,7 @@ describe("voting", () => {
   anchor.setProvider(anchor.AnchorProvider.env());
 
   const program = anchor.workspace.Voting as Program<Voting>;
+  const LAMPORTS_PER_SOL = 1000000000;
   console.log(program.programId.toBase58());
   const mint_auth = anchor.web3.Keypair.generate();
   const gobernance_account = anchor.web3.Keypair.generate();
@@ -28,35 +30,35 @@ describe("voting", () => {
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         mint_auth.publicKey,
-        10000000000
+        2*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         gobernance_account.publicKey,
-        10000000000
+        2*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         user.publicKey,
-        10000000000
+        0.2*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         Candidate1.publicKey,
-        10000000000
+        2*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         Candidate2.publicKey,
-        10000000000
+        2*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
@@ -188,6 +190,7 @@ describe("voting", () => {
     await logTx(program.provider, txid);
     
     await logTx(program.provider, txid);
+
   });
 
 
