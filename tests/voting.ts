@@ -21,6 +21,7 @@ describe("voting", () => {
   const gobernance_account = anchor.web3.Keypair.generate();
   const user = anchor.web3.Keypair.generate();
   const Candidate1 = anchor.web3.Keypair.generate();
+  const Candidate2 = anchor.web3.Keypair.generate();
   
   it("Initialize start state", async () => {
     // Airdropping tokens to a payer.
@@ -52,9 +53,16 @@ describe("voting", () => {
       ),
       "confirmed"
     );
+    await program.provider.connection.confirmTransaction(
+      await program.provider.connection.requestAirdrop(
+        Candidate2.publicKey,
+        10000000000
+      ),
+      "confirmed"
+    );
   });
 
-  it("Simple Test", async () => {
+  it("Voting System Test", async () => {
     // Add your test here.
     let mint = (await anchor.web3.PublicKey.findProgramAddress(
       [mint_auth.publicKey.toBuffer()],
@@ -85,6 +93,19 @@ describe("voting", () => {
     let userTA = (await anchor.web3.PublicKey.findProgramAddress(
       [user.publicKey.toBuffer(), mint.toBuffer()], program.programId
     ))[0];
+
+    await logTx(program.provider, txid);
+    txid = await program.rpc.initializeTokenAccount({
+      accounts: {
+        tokenAccount: userTA,
+        mint: mint,
+        payer: user.publicKey,
+        systemProgram: anchor.web3.SystemProgram.programId,
+      },
+      signers: [user],
+    });
+    // FIRST CANDIDATE 
+    
     let Candidate1TA = (await anchor.web3.PublicKey.findProgramAddress(
       [Candidate1.publicKey.toBuffer(), mint.toBuffer()], program.programId
     ))[0];
@@ -97,16 +118,23 @@ describe("voting", () => {
       },
       signers: [Candidate1],
     });
-    await logTx(program.provider, txid);
+
+    // SECOND CANDIDATE
+
+    let Candidate2TA = (await anchor.web3.PublicKey.findProgramAddress(
+      [Candidate2.publicKey.toBuffer(), mint.toBuffer()], program.programId
+    ))[0];
+
     txid = await program.rpc.initializeTokenAccount({
       accounts: {
-        tokenAccount: userTA,
+        tokenAccount: Candidate2TA,
         mint: mint,
-        payer: user.publicKey,
+        payer: Candidate2.publicKey,
         systemProgram: anchor.web3.SystemProgram.programId,
       },
-      signers: [user],
+      signers: [Candidate2],
     });
+    
 
     await logTx(program.provider, txid);
 
@@ -130,7 +158,7 @@ describe("voting", () => {
     //});
     await logTx(program.provider, txid);
 
-    txid = await program.rpc.transfer(new anchor.BN(1), {
+    txid = await program.rpc.transfer(new anchor.BN(2), {
       accounts: {
         src: gobernance_accountTA,
         dst: userTA,
@@ -149,6 +177,15 @@ describe("voting", () => {
       signers: [user],
     });
     await logTx(program.provider, txid);
+    txid = await program.rpc.transfer(new anchor.BN(1), {
+      accounts: {
+        src: userTA,
+        dst: Candidate2TA,
+        owner: user.publicKey,
+      },
+      signers: [user],
+    });
+    await logTx(program.provider, txid);
     
     await logTx(program.provider, txid);
   });
@@ -158,5 +195,3 @@ describe("voting", () => {
   
   
 });
-
-
