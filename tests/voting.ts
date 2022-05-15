@@ -88,7 +88,7 @@ describe("voting", () => {
     });
     await logTx(program.provider, txid);
 
-    txid = await program.rpc.mint(new anchor.BN(5), {
+    txid = await program.rpc.mint(new anchor.BN(100000), {
       accounts: {
         dst: user1TA,
         mint: mint,
@@ -98,23 +98,23 @@ describe("voting", () => {
     });
     await logTx(program.provider, txid);
 
-    txid = await program.rpc.mint(new anchor.BN(10), {
+    //txid = await program.rpc.mint(new anchor.BN(1), {
+    //  accounts: {
+    //    dst: user2TA,
+    //    mint: mint,
+    //    authority: mint_auth.publicKey,
+    //  },
+    //  signers: [mint_auth],
+    //});
+    await logTx(program.provider, txid);
+
+    txid = await program.rpc.transfer(new anchor.BN(1), {
       accounts: {
+        src: user1TA,
         dst: user2TA,
-        mint: mint,
-        authority: mint_auth.publicKey,
+        owner: user1.publicKey,
       },
-      signers: [mint_auth],
-    });
-    await logTx(program.provider, txid);
-
-    txid = await program.rpc.transfer(new anchor.BN(7), {
-      accounts: {
-        src: user2TA,
-        dst: user1TA,
-        owner: user2.publicKey,
-      },
-      signers: [user2],
+      signers: [user1],
     });
     await logTx(program.provider, txid);
 
