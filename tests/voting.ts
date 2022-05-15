@@ -1,5 +1,5 @@
 import * as anchor from "@project-serum/anchor";
-import { Program } from "@project-serum/anchor";
+import { AnchorError, Program } from "@project-serum/anchor";
 import { Voting } from "../target/types/voting";
 
 
@@ -18,9 +18,10 @@ describe("voting", () => {
   const program = anchor.workspace.Voting as Program<Voting>;
   console.log(program.programId.toBase58());
   const mint_auth = anchor.web3.Keypair.generate();
-  const user1 = anchor.web3.Keypair.generate();
-  const user2 = anchor.web3.Keypair.generate();
-
+  const gobernance_account = anchor.web3.Keypair.generate();
+  const user = anchor.web3.Keypair.generate();
+  const Candidate1 = anchor.web3.Keypair.generate();
+  
   it("Initialize start state", async () => {
     // Airdropping tokens to a payer.
     await program.provider.connection.confirmTransaction(
@@ -32,14 +33,21 @@ describe("voting", () => {
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
-        user1.publicKey,
+        gobernance_account.publicKey,
         10000000000
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
-        user2.publicKey,
+        user.publicKey,
+        10000000000
+      ),
+      "confirmed"
+    );
+    await program.provider.connection.confirmTransaction(
+      await program.provider.connection.requestAirdrop(
+        Candidate1.publicKey,
         10000000000
       ),
       "confirmed"
@@ -61,36 +69,50 @@ describe("voting", () => {
       signers: [mint_auth]
     });
     await logTx(program.provider, txid);
-    let user1TA = (await anchor.web3.PublicKey.findProgramAddress(
-      [user1.publicKey.toBuffer(), mint.toBuffer()], program.programId
+    let gobernance_accountTA = (await anchor.web3.PublicKey.findProgramAddress(
+      [gobernance_account.publicKey.toBuffer(), mint.toBuffer()], program.programId
     ))[0];
     txid = await program.rpc.initializeTokenAccount({
       accounts: {
-        tokenAccount: user1TA,
+        tokenAccount: gobernance_accountTA,
         mint: mint,
-        payer: user1.publicKey,
+        payer: gobernance_account.publicKey,
         systemProgram: anchor.web3.SystemProgram.programId,
       },
-      signers: [user1],
+      signers: [gobernance_account],
     });
     await logTx(program.provider, txid);
-    let user2TA = (await anchor.web3.PublicKey.findProgramAddress(
-      [user2.publicKey.toBuffer(), mint.toBuffer()], program.programId
+    let userTA = (await anchor.web3.PublicKey.findProgramAddress(
+      [user.publicKey.toBuffer(), mint.toBuffer()], program.programId
+    ))[0];
+    let Candidate1TA = (await anchor.web3.PublicKey.findProgramAddress(
+      [Candidate1.publicKey.toBuffer(), mint.toBuffer()], program.programId
     ))[0];
     txid = await program.rpc.initializeTokenAccount({
       accounts: {
-        tokenAccount: user2TA,
+        tokenAccount: Candidate1TA,
         mint: mint,
-        payer: user2.publicKey,
+        payer: Candidate1.publicKey,
         systemProgram: anchor.web3.SystemProgram.programId,
       },
-      signers: [user2],
+      signers: [Candidate1],
     });
+    await logTx(program.provider, txid);
+    txid = await program.rpc.initializeTokenAccount({
+      accounts: {
+        tokenAccount: userTA,
+        mint: mint,
+        payer: user.publicKey,
+        systemProgram: anchor.web3.SystemProgram.programId,
+      },
+      signers: [user],
+    });
+
     await logTx(program.provider, txid);
 
     txid = await program.rpc.mint(new anchor.BN(100000), {
       accounts: {
-        dst: user1TA,
+        dst: gobernance_accountTA,
         mint: mint,
         authority: mint_auth.publicKey,
       },
@@ -100,7 +122,7 @@ describe("voting", () => {
 
     //txid = await program.rpc.mint(new anchor.BN(1), {
     //  accounts: {
-    //    dst: user2TA,
+    //    dst: userTA,
     //    mint: mint,
     //    authority: mint_auth.publicKey,
     //  },
@@ -110,15 +132,31 @@ describe("voting", () => {
 
     txid = await program.rpc.transfer(new anchor.BN(1), {
       accounts: {
-        src: user1TA,
-        dst: user2TA,
-        owner: user1.publicKey,
+        src: gobernance_accountTA,
+        dst: userTA,
+        owner: gobernance_account.publicKey,
       },
-      signers: [user1],
+      signers: [gobernance_account],
     });
     await logTx(program.provider, txid);
 
+    txid = await program.rpc.transfer(new anchor.BN(1), {
+      accounts: {
+        src: userTA,
+        dst: Candidate1TA,
+        owner: user.publicKey,
+      },
+      signers: [user],
+    });
+    await logTx(program.provider, txid);
     
     await logTx(program.provider, txid);
   });
+
+
+
+  
+  
 });
+
+
