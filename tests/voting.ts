@@ -44,7 +44,7 @@ describe("voting", () => {
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         user.publicKey,
-        0.2*LAMPORTS_PER_SOL
+        0.02*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
@@ -139,7 +139,7 @@ describe("voting", () => {
 
     await logTx(program.provider, txid);
 
-    txid = await program.rpc.mint(new anchor.BN(100000), {
+    txid = await program.rpc.mint(new anchor.BN(25), {
       accounts: {
         dst: gobernance_accountTA,
         mint: mint,
