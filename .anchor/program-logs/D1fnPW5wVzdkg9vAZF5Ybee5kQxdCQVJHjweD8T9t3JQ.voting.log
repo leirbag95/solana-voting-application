@@ -1,1 +1,61 @@
 Streaming transaction logs mentioning D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ. Confirmed commitment
+Transaction executed in slot 6:
+  Signature: 35wnNeoxNfvpxNf2v3fnqvTsEososvX8U5AHY59eW8zRPf1crvpNqDPFWM2akHURzNqHqfH4tKBepwARrZC7wbqx
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: InitializeMint
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 14979 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
+Transaction executed in slot 7:
+  Signature: 3MtBt7TBZfcvfQK17Yt2h9mivCqF1mAs6sEYRMHfSyUNBnAmAzjf2DT1CXfjzGBQ7ioEJkubTQkRZS2rhb4r5QDB
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: InitializeTokenAccount
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 13169 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
+Transaction executed in slot 8:
+  Signature: 5cGkw1EV7TA2V1x5Ay8ZvtvgTGpXCWR1QJJeiw4VPtsAkAm45qduSo7b7eLiFsZCzQrxLNVvnZM87E78YKmnt4iH
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: InitializeTokenAccount
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 14669 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
+Transaction executed in slot 9:
+  Signature: 4HG6HXx1Cmz7u8EG8ZWSb2oN6ceX1UJXQ8unCw3FLa6oCX79P3wk6CftUcATSe5yZJpMFkiaR6hJiHEcsQBrJbaL
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: Mint
+    Program log: total supply 5
+    Program log: dst amount 5
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5071 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
+Transaction executed in slot 10:
+  Signature: 5KMCsY9h7rXtwGERAePftEeqUGVmQ2zLBHbnthqmpDNKCwXVFi7L3BG4y55X1EZpkobzAvR6MTZ9esMuM9MqQfM9
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: Mint
+    Program log: total supply 15
+    Program log: dst amount 10
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5095 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
+Transaction executed in slot 11:
+  Signature: dDuQ89WyhppF5j6PEXU4g27fBHMmmhoGzY1SeKtSYcWwLAQCvEaXbmjjHFX8FAVDCXZanETTLZZkkgcrXxfxiku
+  Status: Ok
+  Log Messages:
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
+    Program log: Instruction: Transfer
+    Program log: src supply 3
+    Program log: dst amount 12
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5317 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
