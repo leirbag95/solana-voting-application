@@ -1,0 +1,12 @@
+/mnt/c/Users/Usuario/Documents/GitHub/solana-voting-application/target/bpfel-unknown-unknown/release/deps/blake3-807cc4c778438bc3.rmeta: /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/lib.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/guts.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/platform.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/portable.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/traits.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/join.rs
+
+/mnt/c/Users/Usuario/Documents/GitHub/solana-voting-application/target/bpfel-unknown-unknown/release/deps/libblake3-807cc4c778438bc3.rlib: /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/lib.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/guts.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/platform.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/portable.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/traits.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/join.rs
+
+/mnt/c/Users/Usuario/Documents/GitHub/solana-voting-application/target/bpfel-unknown-unknown/release/deps/blake3-807cc4c778438bc3.d: /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/lib.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/guts.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/platform.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/portable.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/traits.rs /home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/join.rs
+
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/lib.rs:
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/guts.rs:
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/platform.rs:
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/portable.rs:
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/traits.rs:
+/home/cleon/.cargo/registry/src/github.com-1ecc6299db9ec823/blake3-1.3.1/src/join.rs:

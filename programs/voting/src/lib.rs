@@ -1,8 +1,8 @@
 use anchor_lang::prelude::*;
-/// Pending to modify Program ID :)
+/// Pending to modify Program ID 
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
-#[program] // declare program to Rust
+#[program] 
 
 mod voting {
     use super::*;
@@ -24,7 +24,7 @@ mod voting {
     }
 
     pub fn initialize_token_account(ctx: Context<InitializeTokenAccount>) -> ProgramResult {
-        ctx.accounts.token_account.owner = ctx.accounts.admin.key();
+        ctx.accounts.token_account.owner = ctx.accounts.payer.key();
         ctx.accounts.token_account.mint = ctx.accounts.mint.key();
         ctx.accounts.token_account.amount = 0;
         Ok(())
@@ -61,13 +61,14 @@ mod voting {
         //transfer lamports to the lottery account
 
     }
-    pub fn yes(ctx: Context) -> Result<()>{
+
+    /*pub fn yes(ctx: Context) -> Result<()>{
         Ok(())
     }
     pub fn no(ctx: Context) -> Result<()>{
         Ok(())
     }
-
+    */
     //Oracle checks if today It'S before than Deadline ////
 
     // 
@@ -81,11 +82,9 @@ pub struct Initialize<'info> {
     #[account(mut)]
     pub admin: Signer<'info>,    
     pub system_program: Program<'info, System>,
-
-    pub struct Claim<'info>{
-
+   // pub struct Claim<'info>{
     }
-}
+
 #[derive(Accounts)]
 pub struct InitializeMint<'info> {
     #[account(init, seeds = [payer.key().as_ref(),], bump, payer = payer, space = 8 + 40,)]
