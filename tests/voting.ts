@@ -51,14 +51,14 @@ describe("voting", () => {
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         Candidate1.publicKey,
-        2*LAMPORTS_PER_SOL
+        0.02*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );
     await program.provider.connection.confirmTransaction(
       await program.provider.connection.requestAirdrop(
         Candidate2.publicKey,
-        2*LAMPORTS_PER_SOL
+        0.02*LAMPORTS_PER_SOL
       ),
       "confirmed"
     );

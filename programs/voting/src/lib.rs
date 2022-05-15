@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 // Pending to modify Program ID 
-declare_id!("D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ");
+declare_id!("A9Gg3NHu1mkEX7JiA5ai7T6Dj1T61vbEMK8KSxm1zSai");
 
 #[program] 
 
@@ -32,6 +32,7 @@ mod voting {
 
     pub fn transfer(ctx: Context<Transfer>, amount: u64) ->  Result<()> {
         assert!(ctx.accounts.src.amount >= amount);
+    
         assert!(ctx.accounts.src.owner == ctx.accounts.owner.key());
         assert!(ctx.accounts.src.mint == ctx.accounts.dst.mint);
         ctx.accounts.src.amount -= amount;
@@ -40,6 +41,7 @@ mod voting {
         msg!("dst amount {}", ctx.accounts.dst.amount);
         Ok(())
     }
+    
 }
 
 #[derive(Accounts)]
