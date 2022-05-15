@@ -1,16 +1,16 @@
 Streaming transaction logs mentioning D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ. Confirmed commitment
-Transaction executed in slot 8:
-  Signature: RNeQYdKLFnYpZfqizVEJBsrTCvfu9GE5r4aBy8pEXFs5C2ibVET2VwS7urFZvqaKLuaMNbQZM9a7yWSUd4yDxsx
+Transaction executed in slot 9:
+  Signature: VMwcMvhdsSuy2vPJLsH8HqXeZjtp6976J2hZvaq4CWrhBzDGj3jx8yCkAQvcQE21aV2j9GjYgJ5L7zKuFH6MkEV
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeMint
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 17979 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 14979 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
-Transaction executed in slot 9:
-  Signature: 3zTjAm62ifFA6Ep3PJgw4G3e4Uxb6hKWatnff9QesuoTa3wDi2rGbNBXULxzw2es1WghY7N1sV2iqBVJWTHsyWPU
+Transaction executed in slot 10:
+  Signature: xtEojqJqnAC3v2WThr92cTGVdLVDaBSbrQhSu33wP47K5WfqN67CtRScADg2tQfQNFKrvV3oLxxFWQmQFjtTWBp
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
@@ -20,57 +20,57 @@ Transaction executed in slot 9:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 14669 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 11:
-  Signature: CYobaDzKrSmdPU76xSg7YV8NT6u8n8QV75hCtofZSKrgUiCyXjEbNgUPWS7LLnVPoZb5DQaNXTdkhVLEghnSFYC
+  Signature: 4noeYKgyqSiBynwyQNm9mg1Vyea3wrux3N9F6KSvS6AKroAEB3qvGHQBaPQRrbH2fUoJYwCbUHfSGZcGb8CTUnAy
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeTokenAccount
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 19169 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 13169 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 11:
-  Signature: 5GmF6XsNqzoNKhr8fSu7yCzWnR7SPyA6sDT3mKuv1SLHcLaaQqx7y814nVYAEvrBDxVGm921W4QbgMRbCuQiXey9
+  Signature: 2TAw6yivg1wDvB6xJCAkExeuVhJox99Ji6CoAyDcAruUFkbx8c7c38ie7YzcQLEa4GZoW3cvUBEWK9QoxXSxAZcd
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeTokenAccount
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 17669 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 13169 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 12:
-  Signature: 5GmF6XsNqzoNKhr8fSu7yCzWnR7SPyA6sDT3mKuv1SLHcLaaQqx7y814nVYAEvrBDxVGm921W4QbgMRbCuQiXey9
+  Signature: 2TAw6yivg1wDvB6xJCAkExeuVhJox99Ji6CoAyDcAruUFkbx8c7c38ie7YzcQLEa4GZoW3cvUBEWK9QoxXSxAZcd
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeTokenAccount
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 17669 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 13169 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 12:
-  Signature: 29FVk5XbZSfH8aQTztKAY1HPRiUNooFeGNFW6w9J3bBUdRYrHp7j18pjDw3F3DVSc6j6ZegehFWXBERRwMcx1fVF
+  Signature: 3EcZLYdeXaqtadu79G5zMZhqR4s673BeJ2EkUB8ZRyzDByFywDwvLDBwGRWsDE2jM35GdLyz29gVLxGBWzxoff8f
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeTokenAccount
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 19169 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 16169 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 13:
-  Signature: 29FVk5XbZSfH8aQTztKAY1HPRiUNooFeGNFW6w9J3bBUdRYrHp7j18pjDw3F3DVSc6j6ZegehFWXBERRwMcx1fVF
+  Signature: 3EcZLYdeXaqtadu79G5zMZhqR4s673BeJ2EkUB8ZRyzDByFywDwvLDBwGRWsDE2jM35GdLyz29gVLxGBWzxoff8f
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
     Program log: Instruction: InitializeTokenAccount
     Program 11111111111111111111111111111111 invoke [2]
     Program 11111111111111111111111111111111 success
-    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 19169 of 200000 compute units
+    Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 16169 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
 Transaction executed in slot 14:
-  Signature: 2GVgaAZ6YCMiTED6T1g6xEZB6tVP68UNrWR6fFFRFJNN9t9yRznvrbnShoQraUwSsgZmSGoG9WuJPBG3oKRcX2M3
+  Signature: 4hDbjd1bRfBBNZ1zjEoKCh98QLs9UJe3KzNwm8iCfLYvpnUwsrbVnUouSdgwhie8VbAX224iuHP9Luk7n9qnzt3q
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
@@ -79,8 +79,8 @@ Transaction executed in slot 14:
     Program log: dst amount 100000
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5125 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
-Transaction executed in slot 16:
-  Signature: 5b3JcMf4H53Fq2256ddQCCRrV5mGvQgvqA1u78TH4soTtLTznsnREPbwppoJnb58rDab7zMiGRsJVMvCEAU39Kse
+Transaction executed in slot 15:
+  Signature: 2kARQFbfWRmWr6ssvk1CwhXrmpGU3w2uvvXPo33hutur8x3vG4R8qwaMgA2bLgNCpursLVBPmbEea7JKLdEHzo9s
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
@@ -89,8 +89,8 @@ Transaction executed in slot 16:
     Program log: dst amount 2
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5328 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
-Transaction executed in slot 17:
-  Signature: 2BiC44eWZqfuKkHYmXHLcxZVvgypE3XsJfPK8PtUJ6jZuRVzzSK1pNR64iCSSCXwwPWmJ8pd63p56cp5uc1oe7pb
+Transaction executed in slot 16:
+  Signature: 3r77pnvqP7xi5TsfRmRRwVGJJo8yKwPV74Bmt35N3jrVi33aibH82vfCgCZUvUUXCqtBvWMyKrVU6EoQoCdNgJgb
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]
@@ -99,8 +99,8 @@ Transaction executed in slot 17:
     Program log: dst amount 1
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ consumed 5305 of 200000 compute units
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ success
-Transaction executed in slot 18:
-  Signature: 4o2SDCuw9yLTMThf34qnRk8CJrANC1KFtw62cUzqRW35o9hyJCLQxDW5APuCAEpQnn3eEAtZKdBPTV2iUL3NBJrd
+Transaction executed in slot 17:
+  Signature: 4PEWCLG2pxd7e7kCVya2GqpYLELMvhXreNfopmm529UpEeKWd26V3XpPdbTzQYJXFpkp4H7qjCgusFKu6zP4VcEa
   Status: Ok
   Log Messages:
     Program D1fnPW5wVzdkg9vAZF5Ybee5kQxdCQVJHjweD8T9t3JQ invoke [1]

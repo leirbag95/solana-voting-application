@@ -96,7 +96,6 @@ describe("voting", () => {
       [user.publicKey.toBuffer(), mint.toBuffer()], program.programId
     ))[0];
 
-    await logTx(program.provider, txid);
     txid = await program.rpc.initializeTokenAccount({
       accounts: {
         tokenAccount: userTA,
@@ -158,7 +157,6 @@ describe("voting", () => {
     //  },
     //  signers: [mint_auth],
     //});
-    await logTx(program.provider, txid);
 
     txid = await program.rpc.transfer(new anchor.BN(2), {
       accounts: {
@@ -189,7 +187,6 @@ describe("voting", () => {
     });
     await logTx(program.provider, txid);
     
-    await logTx(program.provider, txid);
 
   });
 
