@@ -20,13 +20,13 @@ anchor build
 anchor deploy
 ```
 
-'''bash
+```bash
 solana airdrop 2 <YOURPUBKEY>
 #This command only in you don't have lamports on the account
 #By the way, you have to change the Program ID from Anchor.toml and lib.rs to make it works!
 #Also, you have to turn off the solana validator when testing in next step
-'''
-'''bash
+```
+```bash
 anchor test
-'''
+```
 
