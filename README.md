@@ -1,6 +1,6 @@
-## Solana-voting-application
+# Solana-voting-application
 
-# MacOS & Linux
+## MacOS & Linux
 Welcome to our Voting System App made at Solana Coding Bootcamp ^_^ . 
 You would probably need to install Solana, Anchor and Rust to make it all run.
 You can install that dependencies following this tutorial : https://project-serum.github.io/anchor/getting-started/installation.html
