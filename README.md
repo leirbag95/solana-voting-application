@@ -1,5 +1,4 @@
-# solana-voting-application
-A simple voting or governance application powered by solana
+## Solana-voting-application
 
 # MacOS & Linux
 Welcome to our Voting System App made at Solana Coding Bootcamp ^_^ . 
