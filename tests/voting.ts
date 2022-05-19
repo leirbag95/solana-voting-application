@@ -158,7 +158,7 @@ describe("voting", () => {
     //  signers: [mint_auth],
     //});
 
-    txid = await program.rpc.transfer(new anchor.BN(2), {
+    txid = await program.rpc.transfer(new anchor.BN(20), {
       accounts: {
         src: gobernance_accountTA,
         dst: userTA,
@@ -181,6 +181,16 @@ describe("voting", () => {
       accounts: {
         src: userTA,
         dst: Candidate2TA,
+        owner: user.publicKey,
+      },
+      signers: [user],
+    });
+    await logTx(program.provider, txid);
+
+    txid = await program.rpc.burn(new anchor.BN(10), {
+      accounts: {
+        src: userTA,
+        mint: mint,
         owner: user.publicKey,
       },
       signers: [user],

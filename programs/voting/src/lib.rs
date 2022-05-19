@@ -41,6 +41,16 @@ mod voting {
         msg!("dst amount {}", ctx.accounts.dst.amount);
         Ok(())
     }
+    pub fn burn(ctx: Context<Burn>, amount: u64) -> Result<()> {
+        assert!(ctx.accounts.src.owner == ctx.accounts.owner.key());
+        assert!(ctx.accounts.src.mint == ctx.accounts.mint.key());
+        assert!(ctx.accounts.src.amount >= amount);
+        ctx.accounts.mint.supply -= amount;
+        ctx.accounts.src.amount -= amount;
+        msg!("total supply {}", ctx.accounts.mint.supply);
+        msg!("src amount {}", ctx.accounts.src.amount);
+        Ok(())
+    }
     
 }
 
@@ -71,6 +81,14 @@ pub struct MintCtx<'info> {
     dst: Account<'info, TokenAccount>,
     authority: Signer<'info>,
 }
+#[derive(Accounts)]
+pub struct Burn<'info> {
+    #[account(mut)]
+    mint: Account<'info, Mint>,
+    #[account(mut)]
+    src: Account<'info, TokenAccount>,
+    owner: Signer<'info>,
+}
 
 #[derive(Accounts)]
 pub struct Transfer<'info> {
@@ -87,6 +105,7 @@ struct Mint {
     pub authority: Pubkey,
     pub supply: u64,
 }
+
 
 #[account]
 struct TokenAccount {
